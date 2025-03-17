@@ -1,0 +1,48 @@
+<!-- filepath: /home/quandaibang/Desktop/duckgame/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Race</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="fireworks-container"></div>
+        <button class="button" onclick="openModal()">Nhập Tên<span class="arrow">➔</span></button>
+        <div class="race-container">
+            <div class="start-logo">
+                <img src="images/start.png" alt="Start Logo" class="start-logo">
+            </div>
+            <div class="race-track" id="raceTrack">
+                <div class="road-line" id="roadLine"></div>
+            </div>
+            <div class="finish-logo">
+                <img src="images/finish.png" alt="Finish Logo" class="finish-logo">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="button-start" onclick="startRace()">Xuất Phát</button>
+            <button class="button-reset" onclick="resetRace()">Reset</button>
+            <button class="button-toggle-music" onclick="toggleMusic()">Bật/Tắt Nhạc</button>
+        </div>
+        <audio id="backgroundMusic" src="music/race.mp3" preload="auto" autoplay loop></audio>
+
+        <div class="modal" id="modal">
+            <h2>Số Lượng</h2>
+            <input class="input-number" type="number" id="numDucks" min="1" placeholder="Số lượng">
+            <button onclick="setDuckNames()">Xác nhận</button>
+            <div class="items-number" id="nameInputs"></div>
+            <button onclick="submitDuckNames()">Xong</button>
+        </div>
+
+        <div id="winnerModal" class="modal">
+            <h2>🎉 Tay dua chiến thắng là: <span id="winnerName"></span> 🎉</h2>
+            <button onclick="closeWinnerModal()">OK</button>
+        </div>
+
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
