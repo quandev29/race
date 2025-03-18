@@ -1,15 +1,13 @@
-<!-- filepath: /home/quandaibang/Desktop/duckgame/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Duck Race</title>
+    <title>Ms.Trinh</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div id="fireworks-container"></div>
         <button class="button" onclick="openModal()">Nhập Tên<span class="arrow">➔</span></button>
         <div class="race-container">
             <div class="start-logo">
@@ -28,6 +26,7 @@
             <button class="button-toggle-music" onclick="toggleMusic()">Bật/Tắt Nhạc</button>
         </div>
         <audio id="backgroundMusic" src="music/race.mp3" preload="auto" autoplay loop></audio>
+        <audio id="cheeringSound" src="music/cheering.mp3" preload="auto"></audio>
 
         <div class="modal" id="modal">
             <h2>Số Lượng</h2>
@@ -38,7 +37,7 @@
         </div>
 
         <div id="winnerModal" class="modal">
-            <h2>🎉 Tay dua chiến thắng là: <span id="winnerName"></span> 🎉</h2>
+            <h2>🎉 Người chiến thắng: <span id="winnerName"></span> 🎉</h2>
             <button onclick="closeWinnerModal()">OK</button>
         </div>
 

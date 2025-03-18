@@ -69,10 +69,7 @@ function startRace() {
   roadLine.classList.add('active'); // Thêm hiệu ứng chạy đường đua
   const raceTrack = document.getElementById('raceTrack');
   const trackWidth = raceTrack.offsetWidth;
-  const finishLinePosition = trackWidth - 60;
-
-  // Gradually hide the start logo
-  // document.querySelector('.start-logo').classList.add('hidden'); // Comment out or remove this line
+  const finishLinePosition = trackWidth - 30;
 
   const raceInterval = setInterval(() => {
     ducks.forEach((duck) => {
@@ -91,9 +88,9 @@ function startRace() {
         document.getElementById('winnerModal').classList.add('active');
         document.getElementById('cheeringSound').play();
         document.body.classList.add('flash-bg');
+        roadLine.classList.remove('active'); // Dừng hiệu ứng chạy đường đua ngay lập tức
         setTimeout(() => {
           document.body.classList.remove('flash-bg');
-          roadLine.classList.remove('active');
         }, 2000);
       }
     });
